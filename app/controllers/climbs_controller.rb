@@ -1,4 +1,5 @@
 class ClimbsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
   def index
     @climbs = Climb.where.not(latitude: nil, longitude: nil)
 
@@ -6,7 +7,7 @@ class ClimbsController < ApplicationController
       {
         lat: climb.latitude,
         lng: climb.longitude,
-        #infoWindow: render_to_string(partial: "card_window_popup", locals: { climb: climb })
+        infoWindow: render_to_string(partial: "card_window_popup", locals: { climb: climb })
       }
     end
   end
