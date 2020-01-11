@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'trip_reports/index'
+  get 'trip_reports/new'
   devise_for :users
   root to: 'climbs#index'
 

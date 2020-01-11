@@ -1,0 +1,11 @@
+<h2>All trip reports</h2>
+<!-- Filter buttons for a)last week -->
+
+<ul>
+  <%= @trip_reports.each do |report| %>
+    <li>
+      <%= report.date %>: <%= report.content %>
+      for climb: <%= link_to report.climb.name, climb_path(report.climb)  %>
+      (by: <%= report.user.first_name %> <%= report.user.last_name %> ) </li>
+  <% end %>
+  </ul>
