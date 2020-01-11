@@ -1,0 +1,19 @@
+<div class="container">
+  <p><%= link_to "Back to Home", root_path, class:"btn btn-primary mt-3" %></p>
+  <h1><%#= @climb.name %></h1>
+  <h3>Grade: <%= @climb.grade %></h3>
+  <h3>Approach difficulty: <%= @climb.approach %></h3>
+  <p>Description: <%= @climb.description %></p>
+
+  <ul>
+    <% @climb.trip_reports.each do |report| %>
+    <li><%= report.content %><br>
+      <%= cl_image_tag report.photo, height: 300, width: 400, crop: :fill %>
+      <%= report.date %><br>
+      by: <%= report.user.first_name %><%= report.user.last_name %>
+      <%= link_to "delete", trip_report_path(report), method: 'delete', data: { confirm: "Are you sure?" }  %></li>
+    <% end %>
+  </ul>
+
+  <%= link_to "Add new trip report", new_climb_trip_report_path(@climb), class:"btn btn-primary" %>
+</div>

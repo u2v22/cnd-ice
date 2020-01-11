@@ -1,5 +1,7 @@
 class ClimbsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :set_climb, only: [:show, :new, :create]
+
   def index
     @climbs = Climb.where.not(latitude: nil, longitude: nil)
 
@@ -13,5 +15,15 @@ class ClimbsController < ApplicationController
   end
 
   def show
+  end
+
+  private
+
+  def set_climb
+    @climb = Climb.find(params[:id])
+  end
+
+  def climb_params
+    params.require(:climb, :trip_report).permit(:name, :region, :description, :grade, :approach, :content)
   end
 end
