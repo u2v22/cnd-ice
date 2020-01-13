@@ -18,3 +18,40 @@
   line-height: 32px;
   font-size: 22px;
 }
+
+.card-marker{
+  display:flex;
+  text-decoration: none;
+  color: white;
+  justify-content: space-between;
+  text-align: center;
+  margin: 0;
+}
+
+.card-marker-header {
+  font-size: 12px;
+}
+
+.card-marker-content {
+  font-size: 10px;
+  margin: 0;
+}
+.mapboxgl-popup {
+  padding: 0;
+  margin: 0
+}
+
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-content {
+  margin: 0;
+  padding: 4px 20px;
+  background: #333333;
+  border-radius: 50px;
+}
+
+.mapboxgl-popup-close-button {
+  display: none;
+}
+
+.mapboxgl-popup-tip {
+  display: none;
+}
