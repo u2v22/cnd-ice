@@ -36,6 +36,6 @@ class TripReportsController < ApplicationController
   end
 
   def trip_report_params
-    params.require(:trip_report).permit(:content, :date, :photo)
+    params.require(:trip_report).permit(:content, :date, :photo, :photos)
   end
 end
