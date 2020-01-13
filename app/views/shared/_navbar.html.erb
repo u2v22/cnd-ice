@@ -1,7 +1,9 @@
 <footer class="footer">
   <div class="navbar">
     <div class="home">
-      <i class="fas fa-home"></i>
+      <%= link_to root_path do %>
+    <i class="fas fa-home"></i>
+      <% end %>
     </div>
     <div class="all-TR">
       <i class="fas fa-file-contract"></i>
@@ -13,7 +15,10 @@
       <i class="fas fa-heart"></i>
     </div>
     <div class="settings">
-      <i class="fas fa-cog"></i>
+      <%= link_to new_user_session_path do %>
+        <i class="fas fa-cog"></i>
+      <% end %>
     </div>
   </div>
 </footer>
+
