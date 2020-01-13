@@ -1,9 +1,16 @@
-<div class="container">
-  <p><%= link_to "Back to Home", root_path, class:"btn btn-primary mt-3" %></p>
-  <h1><%#= @climb.name %></h1>
-  <h3>Grade: <%= @climb.grade %></h3>
-  <h3>Approach difficulty: <%= @climb.approach %></h3>
-  <p>Description: <%= @climb.description %></p>
+<div class="climb-wrapper">
+  <h1 class="climb-title"><%= @climb.name %></h1>
+</div>
+<div class="climb-wrapper">
+  <div class="climb-properties">
+    <h3><%= @climb.grade %></h3>
+    <h3><%= @climb.approach %></h3>
+  </div>
+</div>
+<div class="climb-wrapper">
+  <p>Description:
+    <br><br>
+    <%= @climb.description %></p>
 
   <ul>
     <% @climb.trip_reports.each do |report| %>
@@ -17,3 +24,4 @@
 
   <%= link_to "Add new trip report", new_climb_trip_report_path(@climb), class:"btn btn-primary" %>
 </div>
+
