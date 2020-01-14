@@ -1,12 +1,11 @@
 .card-TR {
   margin: 0;
+  text-decoration: none;
 }
 
 .card-TR ul {
-  text-decoration: none;
   margin: 0;
   padding: 0;
-  text-decoration:none;
 }
 
 .card-TR li {
@@ -19,7 +18,7 @@
   font-size: 22px;
 }
 
-.card-marker{
+.card-marker {
   display:flex;
   text-decoration: none;
   color: white;
@@ -29,16 +28,20 @@
 }
 
 .card-marker-header {
-  font-size: 12px;
+  // font-size: 12px;
 }
 
 .card-marker-content {
-  font-size: 10px;
   margin: 0;
+  text-decoration:none;
+  &:hover {
+    text-decoration:none;
+  }
 }
 .mapboxgl-popup {
   padding: 0;
-  margin: 0
+  margin: 0;
+  font-size: 14px;
 }
 
 .mapboxgl-popup-anchor-bottom .mapboxgl-popup-content {
