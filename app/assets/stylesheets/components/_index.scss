@@ -5,3 +5,9 @@
 @import "greeting-bar";
 @import "cards";
 @import "map";
+
+#document {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 49px;
+}
