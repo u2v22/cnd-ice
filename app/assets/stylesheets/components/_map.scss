@@ -1,11 +1,21 @@
-.mapboxgl-popup {
-  position:absolute;
-  bottom:10px;
-  left:10px;
-  }
+#map {
+  height: 100vh;
+  width: 100%;
+  margin-bottom: 100px;
 }
 
-.mapboxgl-popup-content {
-  text-align: center;
-  font-family: 'Open Sans', sans-serif;
+.mapboxgl-popup-close-button {
+  display: none;
+}
+
+.mapboxgl-popup-tip {
+  display: none;
+}
+
+.mapboxgl-ctrl-bottom-right {
+  display: none;
+}
+
+.mapboxgl-ctrl-bottom-left {
+  display: none;
 }

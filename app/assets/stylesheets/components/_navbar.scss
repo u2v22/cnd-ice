@@ -1,8 +1,9 @@
 .navbar {
-  position:fixed-bottom;
   justify-content: space-between;
+  bottom: 0;
+  position: fixed;
   background: #333333;
   color:white;
   font-size: 22px;
-  bottom: 0;
+  width: 100%;
 }
