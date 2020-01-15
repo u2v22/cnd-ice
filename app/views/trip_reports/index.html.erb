@@ -3,11 +3,11 @@
 <div class="card-TR">
   <ul>
     <%= @trip_reports.each do |report| %>
-      <li>
-        <h3><%= report.user.first_name %> <%= report.user.last_name %> climbed <%= link_to report.climb.name, climb_path(report.climb) %> on <%= report.date.strftime("%a %b %d, %y") %>: </h3>
-        <br>
-        <p><%= report.content %></p>
-      </li>
+    <li>
+      <h3><%= report.user.first_name %> <%= report.user.last_name %> climbed <%= link_to report.climb.name, climb_path(report.climb) %> on <%= report.date.strftime("%a %b %d, %y") %>: </h3>
+      <br>
+      <p><%= report.content %></p>
+    </li>
     <% end %>
-    </ul>
+  </ul>
 </div>

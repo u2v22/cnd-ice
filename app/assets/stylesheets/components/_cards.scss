@@ -9,8 +9,8 @@
 }
 
 .card-TR li {
-  list-style: none;
   border-bottom: 1px solid #c4c4c4;
+  list-style: none;
 }
 
 .card-TR h3 {
@@ -19,16 +19,12 @@
 }
 
 .card-marker {
-  display:flex;
+  display: flex;
   text-decoration: none;
   color: white;
   justify-content: space-between;
   text-align: center;
   margin: 0;
-}
-
-.card-marker-header {
-  // font-size: 12px;
 }
 
 .card-marker-content {

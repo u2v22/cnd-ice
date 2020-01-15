@@ -1,27 +1,18 @@
-<div class="climb-wrapper">
-  <h1 class="climb-title"><%= @climb.name %></h1>
-</div>
-<div class="climb-wrapper">
-  <div class="climb-properties">
+<div class="card-TR">
+  <ul>
+    <h1><%= @climb.name %></h1>
     <h3><%= @climb.grade %></h3>
     <h3><%= @climb.approach %></h3>
-  </div>
-</div>
-<div class="climb-wrapper">
-  <p>Description:
-    <br><br>
-    <%= @climb.description %></p>
-
-  <ul>
-    <% @climb.trip_reports.each do |report| %>
-    <li><%= report.content %><br>
-      <%= cl_image_tag report.photo, height: 300, width: 400, crop: :fill %>
-      <%= report.date %><br>
-      by: <%= report.user.first_name %><%= report.user.last_name %>
-      <%= link_to "delete", trip_report_path(report), method: 'delete', data: { confirm: "Are you sure?" }  %></li>
-    <% end %>
+    <p>Description:</p>
+      <br>
+    <p><%= @climb.description %></p>
   </ul>
-
-  <%= link_to "Add new trip report", new_climb_trip_report_path(@climb), class:"btn btn-primary" %>
+  <ul>
+  <% @climb.trip_reports.each do |report| %>
+    <li><%= report.content %><br> </li>
+    <li><%= report.date %></li><br>
+    <%= cl_image_tag report.photo, height: 300, width: 400, crop: :fill %>
+    <li> by: <%= report.user.first_name %><%= report.user.last_name %><%= link_to "delete", trip_report_path(report), method: 'delete', data: { confirm: "Are you sure?" }  %></li>
+  <% end %>
+  </ul>
 </div>
-
