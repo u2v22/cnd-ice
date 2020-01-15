@@ -1,9 +1,10 @@
 # This file should contain all the record creation needed to seed the database with its default values.
-northghost = "North Ghost"
+# Region options: "north-rockies", "cariboos", "north-columbia", "south-columbia", "kootenay-boundary", "purcells", "lizard-range", "south-rockies", "kananaskis", "little-yoho", "jasper"? , "banff"?
+northghost = ""
 southghost = "South Ghost"
-kananaskis = "Kananaskis"
-banff = "Banff"
-lakelouise = "Lake Louise"
+kananaskis = "kananaskis"
+banff = "banff"
+lakelouise = "banff"
 
 
 puts 'Destroying previous climbs...'
