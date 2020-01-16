@@ -1,8 +1,12 @@
 <div class="card-TR">
   <ul>
     <h1><%= @climb.name %></h1>
-    <h3><%= @climb.grade %></h3>
-    <h3><%= @climb.approach %></h3>
+    <div class="climb-properties">
+      <h3><%= @climb.grade %></h3>
+      <h3><%= @climb.approach %></h3>
+      <h3><%= @climb.avi %></h3>
+    </div>
+    <h3>Climb status: <%= @climb.status %></h3>
     <p>Description:</p>
       <br>
     <p><%= @climb.description %></p>

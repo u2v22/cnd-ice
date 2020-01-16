@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2020_01_15_160720) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
-    t.string "status"
+    t.string "status", default: "unknown"
   end
 
   create_table "trip_reports", force: :cascade do |t|
