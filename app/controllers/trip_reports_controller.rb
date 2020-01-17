@@ -3,7 +3,7 @@ class TripReportsController < ApplicationController
   before_action :set_trip_report, only: [:edit, :update, :destroy]
 
   def index
-    @trip_reports = TripReport.all
+    @trip_reports = TripReport.all.order(date: :desc)
   end
 
   def new
@@ -15,7 +15,7 @@ class TripReportsController < ApplicationController
     @trip_report = TripReport.new(trip_report_params)
     @trip_report.user_id = current_user.id
     @trip_report.climb = Climb.find(trip_report_params[:climb_id])
-
+    Climb.find(trip_report_params[:climb_id]).update(status: @trip_report.status)
     if @trip_report.save
       redirect_to climb_path(@trip_report.climb)
     else
@@ -46,6 +46,6 @@ class TripReportsController < ApplicationController
   end
 
   def trip_report_params
-    params.require(:trip_report).permit(:climb_id, :content, :date, :photo, :user_id, :date)
+    params.require(:trip_report).permit(:climb_id, :content, :date, :photo, :user_id, :date, :status)
   end
 end

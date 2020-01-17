@@ -1,18 +1,18 @@
 <div class="card-TR">
   <ul>
-    <h1><%= @climb.name %></h1>
+    <h1 class="text-center"><%= @climb.name %></h1>
     <div class="climb-properties">
       <h3><%= @climb.grade %></h3>
       <h3><%= @climb.approach %></h3>
       <h3><%= @climb.avi %></h3>
     </div>
-    <h3>Climb status: <%= @climb.status %></h3>
+    <h3>Climb status: <%= @climb.status %> as of <%= @climb.trip_reports.last.updated_at.strftime("%I:%M%P %A %b.%d") %></h3>
     <p>Description:</p>
       <br>
     <p><%= @climb.description %></p>
   <div class="bg-light shadow">
   <% @climb.trip_reports.each do |report| %>
-    <li><%= report.date.strftime("%A %b %d, %Y") %> by <%= report.user.first_name %> <%= report.user.last_name %>
+    <li><%= report.date.strftime("%A %b %d") %> by <%= report.user.first_name %> <%= report.user.last_name %>
       <% if report.user == current_user %>
         <%= link_to "(update)", edit_trip_report_path(report) %>
       <% end %>
