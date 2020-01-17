@@ -14,6 +14,9 @@
   <% @climb.trip_reports.each do |report| %>
     <li><%= report.date.strftime("%A %b %d, %Y") %> by <%= report.user.first_name %> <%= report.user.last_name %>
       <% if report.user == current_user %>
+        <%= link_to "(update)", edit_trip_report_path(report) %>
+      <% end %>
+      <% if report.user == current_user %>
         <%= link_to "(delete)", trip_report_path(report), method: 'delete', data: { confirm: "Are you sure?" }  %>
       <% end %>
     </li>
