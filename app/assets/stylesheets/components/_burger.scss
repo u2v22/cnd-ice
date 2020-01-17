@@ -1,0 +1,16 @@
+.filter-burger {
+  position:absolute;
+  top:32px;
+  right:8px;
+  // padding: 20px;
+  border-right: 5px;
+  font-size: 22px;
+}
+
+.filter-burger i {
+  padding: 20px;
+  background-color: #333333;
+  border-radius: 50%;
+  box-shadow: 10px 0px 15px #c4c4c4;
+  color: white;
+}
