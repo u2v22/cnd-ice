@@ -24,6 +24,6 @@ class ClimbsController < ApplicationController
   end
 
   def climb_params
-    params.require(:climb, :trip_report).permit(:name, :region, :description, :grade, :approach, :content)
+    params.require(:climb, :trip_report).permit(:name, :region, :description, :grade, :approach, :content, :status)
   end
 end
