@@ -1,6 +1,7 @@
 <div class="container">
 <h2>Add new trip report here:</h2>
-  <%= simple_form_for [@climb, @trip_report] do |f| %>
+  <%= simple_form_for(@trip_report) do |f| %>
+    <%= f.association :climb, collection: Climb.all  %>
     <%= f.input :content, placeholder: "great climb here" %>
     <%= f.input :date %>
     <%= f.input :user, as: :hidden, default: current_user %>
