@@ -10,14 +10,17 @@
     <p>Description:</p>
       <br>
     <p><%= @climb.description %></p>
-  </ul>
-  <ul>
+  <div class="bg-light shadow">
   <% @climb.trip_reports.each do |report| %>
-    <li><%= report.content %><br> </li>
-    <li><%= report.date %></li><br>
-    <%= cl_image_tag report.photo if report.photo%>
-      <!-- , height: 300, width: 400, crop: :fill  -->
-    <li> by: <%= report.user.first_name %><%= report.user.last_name %><%= link_to "delete", trip_report_path(report), method: 'delete', data: { confirm: "Are you sure?" }  %></li>
+    <li><%= report.date.strftime("%A %b %d, %Y") %> by <%= report.user.first_name %> <%= report.user.last_name %>
+      <% if report.user == current_user %>
+        <%= link_to "(delete)", trip_report_path(report), method: 'delete', data: { confirm: "Are you sure?" }  %>
+      <% end %>
+    </li>
+    <li><%= report.content %></li>
+    <% if report.photo.present? %>
+      <%= cl_image_tag(report.photo) %>
+    <% end %>
   <% end %>
   </ul>
 </div>

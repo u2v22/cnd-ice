@@ -1,16 +1,19 @@
 .card-TR {
   margin: 0;
   text-decoration: none;
+  background-color: white;
 }
 
 .card-TR ul {
   margin: 0;
   padding: 0;
+  border-bottom: 3px solid black;
 }
 
 .card-TR li {
   border-bottom: 1px solid #c4c4c4;
   list-style: none;
+  background-color: #c4c4c4;
 }
 
 .card-TR h3 {

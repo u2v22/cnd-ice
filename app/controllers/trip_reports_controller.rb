@@ -16,6 +16,7 @@ class TripReportsController < ApplicationController
     @trip_report.climb = Climb.find(trip_report_params[:climb_id])
 
     if @trip_report.save
+      strip_whitespace(@trip_report.content)
       redirect_to climb_path(@trip_report.climb)
     else
       render :new
@@ -32,5 +33,9 @@ class TripReportsController < ApplicationController
 
   def trip_report_params
     params.require(:trip_report).permit(:climb_id, :content, :date, :photo)
+  end
+
+  def strip_whitespace(input)
+    return input.strip!
   end
 end
