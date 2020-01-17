@@ -8,7 +8,6 @@ class TripReportsController < ApplicationController
   def new
     @user = User.new
     @trip_report = TripReport.new
-    # @trip_report.climb = Climb.find(params[:climb_id])
   end
 
   def create
