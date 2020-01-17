@@ -1,5 +1,6 @@
 class TripReportsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :set_trip_report, only: [:edit, :update, :destroy]
 
   def index
     @trip_reports = TripReport.all
@@ -22,15 +23,29 @@ class TripReportsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @trip_report.update(trip_report_params)
+      redirect_to climb_path(@trip_report.climb)
+    else
+      render :edit
+    end
+  end
+
   def destroy
-    @trip_report = TripReport.find(params[:id])
     @trip_report.destroy
     redirect_to climb_path(@trip_report.climb_id)
   end
 
   private
 
+  def set_trip_report
+    @trip_report = TripReport.find(params[:id])
+  end
+
   def trip_report_params
-    params.require(:trip_report).permit(:climb_id, :content, :date, :photo)
+    params.require(:trip_report).permit(:climb_id, :content, :date, :photo, :user, :date)
   end
 end
