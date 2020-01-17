@@ -13,7 +13,7 @@ class TripReportsController < ApplicationController
 
   def create
     @trip_report = TripReport.new(trip_report_params)
-    @trip_report.user = current_user
+    @trip_report.user_id = current_user.id
     @trip_report.climb = Climb.find(trip_report_params[:climb_id])
 
     if @trip_report.save
@@ -46,6 +46,6 @@ class TripReportsController < ApplicationController
   end
 
   def trip_report_params
-    params.require(:trip_report).permit(:climb_id, :content, :date, :photo, :user, :date)
+    params.require(:trip_report).permit(:climb_id, :content, :date, :photo, :user_id, :date)
   end
 end
