@@ -1,29 +1,38 @@
-<div class="card-TR">
-  <ul>
-    <h1 class="text-center"><%= @climb.name %></h1>
-    <div class="climb-properties">
-      <h3><%= @climb.grade %></h3>
-      <h3><%= @climb.approach %></h3>
-      <h3><%= @climb.avi %></h3>
-    </div>
-    <h3>Climb status: <%= @climb.status %> as of <%= @climb.trip_reports.last.updated_at.strftime("%I:%M%P %A %b.%d") %></h3>
-    <p>Description:</p>
-      <br>
-    <p><%= @climb.description %></p>
-  <div class="bg-light shadow">
-  <% @climb.trip_reports.each do |report| %>
-    <li><%= report.date.strftime("%A %b %d") %> by <%= report.user.first_name %> <%= report.user.last_name %>
+<h1 class="text-center"><%= @climb.name %></h1>
+<div class="climb-properties">
+  <h4><%= @climb.grade %></h4>
+  <h4><%= @climb.approach %></h4>
+  <h4><%= @climb.avi %></h4>
+</div>
+
+<div class="card-climb">
+  <% if @climb.status == 'IN' %>
+    <div class="highlight-status green"><h5>Climb is: <%= @climb.status %></div> as of <%= @climb.trip_reports.last.updated_at.strftime("%I:%M%P %A %b.%d %y") %></h5>
+  <% elsif @climb.status == 'not IN' %>
+    <div class="highlight-status red"><h5>Climb is: <%= @climb.status %></div> as of <%= @climb.trip_reports.last.updated_at.strftime("%I:%M%P %A %b.%d %y") %></h5>
+  <% elsif @climb.status == 'Sketchy' %>
+    <div class="highlight-status orange"><h5>Climb is: <%= @climb.status %></div> as of <%= @climb.trip_reports.last.updated_at.strftime("%I:%M%P %A %b.%d %y") %></h5>
+  <% elsif @climb.status == 'status unknown' %>
+    <div class="highlight-status gray"><h5>Climb is: <%= @climb.status %></div> as of <%= @climb.trip_reports.last.updated_at.strftime("%I:%M%P %A %b.%d %y") %></h5>
+  <% end %>
+
+  <p>Description:</p>
+  <p><%= @climb.description %></p>
+<div class="bg-light shadow">
+<% @climb.trip_reports.each do |report| %>
+  <ul class="card-TR">
+    <li><%= report.date.strftime("%a. %b %d") %> by <%= report.user.first_name %> <%= report.user.last_name %>
       <% if report.user == current_user %>
         <%= link_to "(update)", edit_trip_report_path(report) %>
       <% end %>
       <% if report.user == current_user %>
-        <%= link_to "(delete)", trip_report_path(report), method: 'delete', data: { confirm: "Are you sure?" }  %>
+        <%= link_to "(X)", trip_report_path(report), method: 'delete', data: { confirm: "Are you sure?" }  %>
       <% end %>
     </li>
     <li><%= report.content %></li>
     <% if report.photo.present? %>
       <%= cl_image_tag(report.photo) %>
     <% end %>
-  <% end %>
   </ul>
+  <% end %>
 </div>

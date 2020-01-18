@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2020_01_17_215946) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
-    t.string "status", default: "unknown"
+    t.string "status", default: "Status Unknown"
   end
 
   create_table "trip_reports", force: :cascade do |t|
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 2020_01_17_215946) do
     t.bigint "climb_id"
     t.bigint "user_id"
     t.string "photo"
-    t.string "status"
+    t.string "status", default: "Status Unknown"
     t.index ["climb_id"], name: "index_trip_reports_on_climb_id"
     t.index ["user_id"], name: "index_trip_reports_on_user_id"
   end

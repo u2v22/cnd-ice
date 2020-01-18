@@ -27,7 +27,9 @@ class TripReportsController < ApplicationController
   end
 
   def update
+    Climb.find(trip_report_params[:climb_id]).update(status: @trip_report.status)
     if @trip_report.update(trip_report_params)
+
       redirect_to climb_path(@trip_report.climb)
     else
       render :edit
