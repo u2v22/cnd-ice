@@ -2,6 +2,7 @@
 <h2>Add new trip report here:</h2>
   <%= simple_form_for(@trip_report) do |f| %>
     <%= f.association :climb, collection: Climb.all  %>
+    <%= f.input :status, collection: TripReport::STATUS %>
     <%= f.input :content %>
     <%= f.input :date %>
     <%= f.input :photo, as: :file  %>

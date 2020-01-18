@@ -11,6 +11,34 @@
   border-bottom: 1px solid #c4c4c4;
 }
 
+.highlight-status {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 2px;
+  margin: 0;
+}
+
+.highlight-status > h5 {
+  margin: 0;
+}
+
+.green {
+  background-color: #95C623;
+  margin: 0;
+}
+
+.red {
+  background-color: red;
+}
+
+.orange {
+  background-color: #E55812;
+}
+
+.gray {
+  background-color: #c4c4c4;
+}
+
 img {
   width: 100%;
 }

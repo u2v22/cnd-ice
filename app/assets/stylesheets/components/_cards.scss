@@ -1,22 +1,25 @@
-.card-TR {
-  margin: 0;
+.card-climb {
+  margin: 0 10px;
   text-decoration: none;
   background-color: white;
 }
 
-.card-TR ul {
-  margin: 0;
-  padding: 0;
-  border-bottom: 3px solid black;
+.card-TR {
+  margin: 10px 0;
+  padding: 0px;
+  box-shadow: 4px 0px 8px #c4c4c4;
 }
 
 .card-TR li {
-  border-bottom: 1px solid #c4c4c4;
   list-style: none;
-  background-color: #c4c4c4;
+  background-color: #EFE7DA;
+  padding: 4px;
 }
 
-.card-TR h3 {
+.climb-properties h4 {
+  border-bottom: 1px solid #c4c4c4;
+  border-top: 1px solid #c4c4c4;
+  border-right: 1px solid #c4c4c4;
   line-height: 32px;
   font-size: 22px;
 }

@@ -3,5 +3,5 @@ class TripReport < ApplicationRecord
   belongs_to :climb
   belongs_to :user
 
-  STATUS = ['Climb IN', 'Not IN', 'Sketchy', 'Unknown']
+  STATUS = ['IN', 'not IN', 'Sketchy', 'Status Unknown']
 end

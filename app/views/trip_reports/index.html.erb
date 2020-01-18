@@ -1,7 +1,7 @@
-<h2>All trip reports</h2>
+<h2 class="text-center">All trip reports</h2>
 <!-- Filter buttons for a)last week -->
-<div class="card-TR">
-  <ul>
+<div class="card-climb">
+  <ul class="card-TR">
     <% @trip_reports.each do |report| %>
     <li>
       <h3><%= report.user.first_name %> <%= report.user.last_name %> climbed <%= link_to report.climb.name, climb_path(report.climb) %> on <%= report.date.strftime("%a %b %d, %y") %>:
