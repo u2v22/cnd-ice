@@ -22,6 +22,14 @@
       </div>
       <div>
 
+      <%= form_tag root_path, method: :get do %>
+      <%= check_box_tag :query,
+          params[:query],
+          class: "form-control" %>
+          <label>IN</label>
+          <%= submit_tag "Filter", class: "btn btn-success" %>
+      <% end %>
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
