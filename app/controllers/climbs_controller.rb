@@ -14,6 +14,11 @@ class ClimbsController < ApplicationController
     end
   end
 
+  # def self.filtered
+  #   @climbs = Climb.all
+  #   @climbs.status(status)
+  # end
+
   def show
   end
 
