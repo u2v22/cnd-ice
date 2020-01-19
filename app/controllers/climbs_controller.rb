@@ -3,8 +3,15 @@ class ClimbsController < ApplicationController
   before_action :set_climb, only: [:show, :new, :create]
 
   def index
-    @climbs = Climb.where.not(latitude: nil, longitude: nil)
 
+    if params[:status]
+
+      params[:status].each do |value|
+        @climbs = Climb.where(status: value)
+      end
+    else
+      @climbs = Climb.where.not(latitude: nil, longitude: nil)
+    end
     @markers = @climbs.map do |climb|
       {
         lat: climb.latitude,
