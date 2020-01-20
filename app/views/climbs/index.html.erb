@@ -4,6 +4,58 @@
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
 ></div>
 
-<div class="filter-burger">
+<button class="filter-burger" type="button" data-toggle="modal" data-target="#myModal">
   <i class="fas fa-filter"></i>
+</button>
+
+<!-- Modal -->
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Filter Options</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h6>Climb Status:</h6>
+        <div class="d-flex flex-column">
+          <%= form_tag root_path, method: :get do %>
+          <h6 class="my-0"><%= check_box_tag 'status[]', 'IN',
+              params[:status] %>
+              <label>IN</label></h6>
+          <h6 class="my-0"><%= check_box_tag 'status[]', 'not IN',
+              params[:status] %>
+              <label>not IN</label></h6>
+          <h6 class="my-0"><%= check_box_tag 'status[]', 'Sketchy',
+              params[:status] %>
+              <label>Sketchy</label></h6>
+          <h6 class="my-0"><%= check_box_tag 'status[]', 'Status Unknown',
+              params[:status] %>
+              <label>Unknown</label></h6>
+          </div>
+        <h6>Grade:</h6>
+        <div class="d-flex flex-column">
+          <h6 class="my-0"><%= check_box_tag 'grade[]', '%3%',
+              params[:grade] %>
+              <label>WI3</label></h6>
+          <h6 class="my-0"><%= check_box_tag 'grade[]', '%4%',
+              params[:grade] %>
+              <label>WI4</label></h6>
+          <h6 class="my-0"><%= check_box_tag 'grade[]', '%5%',
+              params[:grade] %>
+              <label>WI5</label></h6>
+          <h6 class="my-0"><%= check_box_tag 'grade[]', '%6%',
+              params[:grade] %>
+              <label>WI6</label></h6>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <h6><%= submit_tag "Cancel", 'data-dismiss': "modal", class: "btn btn-secondary" %>
+          <%= submit_tag "Filter", class: "btn btn-dark px-5" %></h6>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
