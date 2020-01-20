@@ -3,8 +3,12 @@ class ClimbsController < ApplicationController
   before_action :set_climb, only: [:show, :new, :create]
 
   def index
-    if params[:status]||params[:grade]
+    if params[:status] && params[:grade]
       @climbs = Climb.where(status: params[:status]).where('grade ILIKE ANY ( array[?] )', params[:grade])
+    elsif params[:status]
+      @climbs = Climb.where(status: params[:status])
+    elsif params[:grade]
+      @climbs = Climb.where('grade ILIKE ANY ( array[?] )', params[:grade])
     else
       @climbs = Climb.where.not(latitude: nil, longitude: nil)
     end
