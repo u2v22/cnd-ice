@@ -6,8 +6,7 @@ class FavoritesController < ApplicationController
   def create
     @favorite = Favorite.new
     @favorite.user_id = current_user.id
-    @favorite.climb = Climb.find(favorite_params[:climb_id])
-    Favorite.find(favorite_params[:climb_id]).update(status: @favorite.status)
+    @favorite.climb = Climb.find(params[:climb_id])
     @favorite.save!
   end
 

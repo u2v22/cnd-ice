@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   root to: 'climbs#index'
 
   resources :trip_reports, only: [:index, :new, :create, :show, :edit, :update, :destroy]
-  resources :climbs, only: [:show]
-  resources :favorites, only: [:index, :create, :update]
+  resources :climbs, only: [:show] do
+    resources :favorites, only: [:create, :update]
+  end
+  resources :favorites, only: [:index]
 end
