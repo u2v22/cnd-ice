@@ -1,8 +1,9 @@
 const favoriteClimb = () => {
-  if (document.querySelector('.fas')) {
-    const toggle_fav = document.querySelector('.fas')
+  if (document.getElementById('fav-heart')) {
+    const toggle_fav = document.getElementById('fav-heart')
     toggle_fav.addEventListener('click', (event) => {
-      event.currentTarget.classList.toggle('favorited');
+      event.currentTarget.classList.toggle('fas');
+      event.currentTarget.classList.toggle('far');
     })
   }
 }
