@@ -1,0 +1,15 @@
+<h2 class="text-center">My Favorites</h2>
+<!-- Filter buttons for a)last week -->
+<div class="card-climb">
+  <ul class="card-TR">
+    <% @favorites.each do |favorite| %>
+    <li>
+      <h3>
+        <%= favorite.user.first_name %>
+        <%= favorite.user.last_name %>
+        <%= link_to favorite.climb.name, climb_path(favorite.climb) %>
+      </h3>
+    </li>
+    <% end %>
+  </ul>
+</div>
