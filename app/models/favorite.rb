@@ -1,4 +1,4 @@
 class Favorite < ApplicationRecord
-  belongs_to :user
-  belongs_to :climb
+  belongs_to :climb, optional: true
+  belongs_to :user, optional: true
 end
