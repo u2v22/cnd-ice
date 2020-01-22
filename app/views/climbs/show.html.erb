@@ -20,9 +20,7 @@
 
   <div class="d-flex justify-content-between">
     <p>Description:</p>
-    <%= link_to climb_favorites_path(@climb), method: :post do %>
-      <i id="fav-heart" class="far fa-heart" style="color:#E55812; font-size: 22px"></i>
-    <% end %>
+    <%= link_to favorite_text, favorite_path(climb: @climb), id:'favorite-link', method: :patch, remote: true %>
   </div>
 
 

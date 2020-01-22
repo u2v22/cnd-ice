@@ -3,25 +3,25 @@ class FavoritesController < ApplicationController
     @favorites = Favorite.all
   end
 
-  def create
-    @favorite = Favorite.new
-    @favorite.user_id = current_user.id
-    @favorite.climb = Climb.find(params[:climb_id])
-    @favorite.save!
-  end
-
   def update
-    # Climb.find(favorite_params[:climb_id]).update(status: @favorite.status)
-    # @favorite.update!(favorite_params)
+    favorite = Favorite.where(climb: Climb.find(params[:climb]), user: current_user)
+
+    if favorite == []
+      Favorite.create!(climb: Climb.find(params[:climb]), user: current_user)
+      @favorite_text = true
+    else
+      favorite.destroy_all
+      @favorite_text = false
+    end
+    respond_to do |format|
+      format.html {}
+      format.js {}
+    end
   end
 
   private
 
-  # def set_favorites
-  #   @favorite = Favorite.find(params[:id])
+  # def favorite_params
+  #   params.require(:climb, :user).permit(:climb_id, :user_id)
   # end
-
-  def favorite_params
-    params.require(:climb, :user).permit(:climb_id, :user_id)
-  end
 end
