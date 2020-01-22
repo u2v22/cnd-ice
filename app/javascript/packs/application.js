@@ -10,3 +10,7 @@ favoriteClimb();
 import { initMapbox } from '../plugins/init_mapbox';
 
 initMapbox();
+
+import { addFavResponse } from '../plugins/add_favorite_response';
+
+addFavResponse();

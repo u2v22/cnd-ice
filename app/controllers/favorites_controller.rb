@@ -1,4 +1,5 @@
 class FavoritesController < ApplicationController
+  before_action :authenticate_user!
   def index
     @favorites = Favorite.all
   end
@@ -14,8 +15,8 @@ class FavoritesController < ApplicationController
       @favorite_text = false
     end
     respond_to do |format|
-      format.html {}
-      format.js {}
+      format.html { }
+      format.js { }
     end
   end
 
