@@ -6,5 +6,5 @@ Rails.application.routes.draw do
 
   resources :trip_reports, only: [:index, :new, :create, :show, :edit, :update, :destroy]
   resources :climbs, only: [:show]
-  resources :favorites, only: [:index]
+  resources :favorites, only: [:index, :update]
 end

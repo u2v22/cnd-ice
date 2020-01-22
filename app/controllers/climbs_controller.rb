@@ -22,6 +22,7 @@ class ClimbsController < ApplicationController
   end
 
   def show
+    @favorite_exists = Favorite.where(climb: @climb, user: current_user) == [] ? false : true
   end
 
   private

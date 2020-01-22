@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_17_215946) do
+ActiveRecord::Schema.define(version: 2020_01_21_204523) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,16 @@ ActiveRecord::Schema.define(version: 2020_01_17_215946) do
     t.datetime "updated_at", null: false
     t.string "name"
     t.string "status", default: "Status Unknown"
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "climb_id"
+    t.bigint "user_id"
+    t.boolean "checked", default: false
+    t.index ["climb_id"], name: "index_favorites_on_climb_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
   end
 
   create_table "trip_reports", force: :cascade do |t|
@@ -56,6 +66,8 @@ ActiveRecord::Schema.define(version: 2020_01_17_215946) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "favorites", "climbs"
+  add_foreign_key "favorites", "users"
   add_foreign_key "trip_reports", "climbs"
   add_foreign_key "trip_reports", "users"
 end

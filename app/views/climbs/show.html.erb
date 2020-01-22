@@ -15,10 +15,16 @@
   <% elsif @climb.status == 'status unknown' %>
     <div class="highlight-status gray"><h5>Climb is: <%= @climb.status %></div> as of <%= @climb.trip_reports.last.updated_at.strftime("%I:%M%P %A %b.%d %y") %></h5>
   <% end %>
+
+
+
   <div class="d-flex justify-content-between">
     <p>Description:</p>
-    <i id="fav-heart" class="far fa-heart" style="color:#E55812; font-size: 22px"></i>
+    <%= link_to favorite_text, favorite_path(climb: @climb), id:'favorite-link', style:"font-size: 22px; text-decoration:none", method: :patch, remote: true %>
   </div>
+
+
+
   <p><%= @climb.description %></p>
 <div class="bg-light shadow">
 <% @climb.trip_reports.each do |report| %>
