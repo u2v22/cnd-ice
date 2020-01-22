@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   end
 
   def favorite_text
-    return @favorite_text ? '<i class="far fa-heart"></i>' : '<i class="fas fa-heart"></i>'
+    @favorite_text ? '★' : '☆'
   end
 
   helper_method :favorite_text
