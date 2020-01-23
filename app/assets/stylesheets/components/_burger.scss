@@ -7,3 +7,9 @@
   color: white;
   padding: 8px 12px;
 }
+
+@media(min-width: 576px) {
+  .filter-burger{
+    top: 58px;
+  }
+}

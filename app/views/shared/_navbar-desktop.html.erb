@@ -1,0 +1,18 @@
+<div class="container-navbar-desktop">
+  <div class="navbar-logo">
+    <%= link_to "CND-ROCKIES-ICE-CONDITIONS", root_path%>
+  </div>
+  <div class=navbar-links>
+      <ul>
+        <li><%= link_to "Trip Reports", trip_reports_path %></li>
+        <li><%= link_to "Add New TR", new_trip_report_path %></li>
+        <li><%= link_to "Favorites", favorites_path %></li>
+        <% if user_signed_in? %>
+          <li><%= link_to "Sign In", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to "Log Out", new_user_session_path%></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
