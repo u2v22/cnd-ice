@@ -12,5 +12,11 @@
 #document {
   display: flex;
   flex-direction: column;
-  margin-bottom: 49px;
+  margin-top: 50px;
+}
+
+@media(max-width: 576px) {
+  #document {
+    margin-top: 0px;
+  }
 }

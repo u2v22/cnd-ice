@@ -22,3 +22,9 @@
 .mapboxgl-ctrl-bottom-left {
   display: none;
 }
+
+@media(max-width: 576px) {
+  #map {
+    height: calc(100vh - 49px);
+  }
+}

@@ -4,3 +4,9 @@
   color:white;
   justify-content: space-between;
 }
+
+@media(min-width: 576px) {
+  .greeting-bar {
+    display: none;
+  }
+}
