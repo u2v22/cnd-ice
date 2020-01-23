@@ -1,19 +1,36 @@
 .card-climb {
-  margin: 0 10px;
+  margin: 0;
   text-decoration: none;
   background-color: white;
 }
 
 .card-TR {
-  margin: 10px 0;
-  padding: 0px;
-  box-shadow: 4px 0px 8px #c4c4c4;
+  margin: 0;
+  padding: 0;
+}
+
+.card-TR a {
+  text-decoration: none;
 }
 
 .card-TR li {
   list-style: none;
-  background-color: #EFE7DA;
-  padding: 4px;
+  padding: 10px;
+  border-top: 1px solid #c4c4c4;
+}
+
+.card-TR p {
+  overflow: hidden;
+  margin: 8px 0 0 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.card-TR-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px;
 }
 
 .climb-properties h4 {
@@ -22,6 +39,7 @@
   border-right: 1px solid #c4c4c4;
   line-height: 32px;
   font-size: 22px;
+  margin: 0;
 }
 
 .card-marker {
@@ -40,6 +58,7 @@
     text-decoration:none;
   }
 }
+
 .mapboxgl-popup {
   padding: 0;
   margin: 0;
@@ -53,3 +72,15 @@
   border-radius: 50px;
 }
 
+.card-description {
+  margin: 10px;
+  align-self: center;
+}
+
+.card-description li {
+  list-style: none;
+}
+
+.card-description p {
+  margin: 0;
+}

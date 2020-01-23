@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 2020_01_22_035458) do
     t.bigint "climb_id"
     t.bigint "user_id"
     t.string "photo"
-    t.string "status", default: "Status Unknown"
+    t.string "status"
     t.index ["climb_id"], name: "index_trip_reports_on_climb_id"
     t.index ["user_id"], name: "index_trip_reports_on_user_id"
   end
