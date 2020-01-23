@@ -1,5 +1,5 @@
 <div class="container">
-<h2>Add new trip report here:</h2>
+<h4 class="mt-2">Add new trip report here:</h4>
   <%= simple_form_for(@trip_report) do |f| %>
     <%= f.association :climb, collection: Climb.all  %>
     <%= f.input :status, collection: TripReport::STATUS %>
@@ -8,6 +8,6 @@
     <%= f.input :user, as: :hidden, default: current_user %>
     <%= f.input :photo, as: :file  %>
     <%= f.input :photo_cache, as: :hidden %>
-    <%= f.submit "Post a trip report", class:"btn btn-primary" %>
+    <%= f.submit "Post a trip report", class:"btn btn-dark w-100" %>
   <% end %>
 </div>

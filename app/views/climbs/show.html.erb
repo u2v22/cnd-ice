@@ -1,43 +1,60 @@
-<h1 class="text-center"><%= @climb.name %></h1>
+<h2 class="text-center my-1"><%= @climb.name %></h2>
 <div class="climb-properties">
   <h4><%= @climb.grade %></h4>
   <h4><%= @climb.approach %></h4>
   <h4><%= @climb.avi %></h4>
 </div>
 
-<div class="card-climb">
-  <% if @climb.status == 'IN' %>
-    <div class="highlight-status green"><h5>Climb is: <%= @climb.status %></div> as of <%= @climb.trip_reports.last.updated_at.strftime("%I:%M%P %A %b.%d %y") %></h5>
-  <% elsif @climb.status == 'not IN' %>
-    <div class="highlight-status red"><h5>Climb is: <%= @climb.status %></div> as of <%= @climb.trip_reports.last.updated_at.strftime("%I:%M%P %A %b.%d %y") %></h5>
-  <% elsif @climb.status == 'Sketchy' %>
-    <div class="highlight-status orange"><h5>Climb is: <%= @climb.status %></div> as of <%= @climb.trip_reports.last.updated_at.strftime("%I:%M%P %A %b.%d %y") %></h5>
-  <% elsif @climb.status == 'status unknown' %>
-    <div class="highlight-status gray"><h5>Climb is: <%= @climb.status %></div> as of <%= @climb.trip_reports.last.updated_at.strftime("%I:%M%P %A %b.%d %y") %></h5>
-  <% end %>
+<div class="card-description">
+  <div class="card-climb">
+    <div class="mb-2">
+      <% if @climb.status && @climb.trip_reports != [] %>
+        <% if @climb.status == 'IN' %>
+          <div class="highlight-status green">
+            Climb is: <%= @climb.status %>
+          </div>
+          as of <%= @climb.trip_reports.last.updated_at.strftime("%I:%M%P %A %b.%d %y") %>
+        <% elsif @climb.status == 'not IN' %>
+          <div class="highlight-status red">
+            Climb is: <%= @climb.status %>
+          </div>
+          as of <%= @climb.trip_reports.last.updated_at.strftime("%I:%M%P %A %b.%d %y") %>
+        <% elsif @climb.status == 'Sketchy' %>
+          <div class="highlight-status orange">
+            Climb is: <%= @climb.status %>
+          </div>
+          as of <%= @climb.trip_reports.last.updated_at.strftime("%I:%M%P %A %b.%d %y") %>
+        <% elsif @climb.status == 'Status Unknown' %>
+          <div class="highlight-status gray">
+            Climb is: <%= @climb.status %>
+          </div>
+          as of <%= @climb.trip_reports.last.updated_at.strftime("%I:%M%P %A %b.%d %y") %>
+        <% end %>
+      <% end %>
+    </div>
 
-
-
-  <div class="d-flex justify-content-between">
-    <p>Description:</p>
-    <%= link_to favorite_text, favorite_path(climb: @climb), id:'favorite-link', style:"font-size: 22px; text-decoration:none", method: :patch, remote: true %>
+    <div class="d-flex justify-content-between mb-1">
+      <div>
+        <p><strong>Description:</strong></p>
+      </div>
+      <div><%= link_to favorite_text, favorite_path(climb: @climb), id:'favorite-link', style:"font-size: 16px; text-decoration:none", method: :patch, remote: true %>
+      </div>
+    </div>
+    <li><%= @climb.description %></li>
   </div>
+</div>
 
 
-
-  <p><%= @climb.description %></p>
-<div class="bg-light shadow">
 <% @climb.trip_reports.each do |report| %>
   <ul class="card-TR">
-    <li><%= report.date.strftime("%a. %b %d") %> by <%= report.user.first_name %> <%= report.user.last_name %>
+    <li><strong><%= report.date.strftime("%a. %b %d") %> by <%= report.user.first_name %> <%= report.user.last_name %></strong>
       <% if report.user == current_user %>
-        <%= link_to "(update)", edit_trip_report_path(report) %>
+        <%= link_to "[update]", edit_trip_report_path(report) %>
       <% end %>
       <% if report.user == current_user %>
-        <%= link_to "(X)", trip_report_path(report), method: 'delete', data: { confirm: "Are you sure?" }  %>
+        <%= link_to "[X]", trip_report_path(report), method: 'delete', data: { confirm: "Are you sure?" }  %>
       <% end %>
-    </li>
-    <li><%= report.content %></li>
+    <div><%= report.content %></div></li>
     <% if report.photo.present? %>
       <%= cl_image_tag(report.photo) %>
     <% end %>
