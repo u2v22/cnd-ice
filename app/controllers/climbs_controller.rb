@@ -1,6 +1,7 @@
 class ClimbsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_climb, only: [:show, :new, :create]
+  before_action :set_climb, only: [:show, :new, :edit, :update, :create]
+  before_action :set_paper_trail_whodunnit
 
   def index
     if params[:status] && params[:grade]
@@ -21,6 +22,25 @@ class ClimbsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    Climb.find(params[:id]).update(description: @climb.description, updated_at: @climb.updated_at)
+    if @climb.update(climb_params)
+      respond_to do |format|
+       format.html { redirect_to climb_path(@climb) }
+       format.js { }
+     end
+    else
+      respond_to do |format|
+        format.html { render 'climbs/edit' }
+        format.js { }
+      end
+    end
+  end
+
+
   def show
     @favorite_exists = Favorite.where(climb: @climb, user: current_user) == [] ? false : true
   end
@@ -32,6 +52,6 @@ class ClimbsController < ApplicationController
   end
 
   def climb_params
-    params.require(:climb, :trip_report).permit(:name, :region, :description, :grade, :approach, :content, :status)
+    params.require(:climb).permit(:name, :region, :description, :grade, :approach, :content, :status, :updated_at, :climb_id, :user)
   end
 end

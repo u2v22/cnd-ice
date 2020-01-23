@@ -13,22 +13,22 @@
           <div class="highlight-status green">
             Climb is: <%= @climb.status %>
           </div>
-          as of <%= @climb.trip_reports.last.updated_at.strftime("%I:%M%P %A %b.%d %y") %>
+          as of <%= @climb.trip_reports.last.updated_at.strftime("%I:%M%P %a %b.%d %y") %>
         <% elsif @climb.status == 'not IN' %>
           <div class="highlight-status red">
             Climb is: <%= @climb.status %>
           </div>
-          as of <%= @climb.trip_reports.last.updated_at.strftime("%I:%M%P %A %b.%d %y") %>
+          as of <%= @climb.trip_reports.last.updated_at.strftime("%I:%M%P %a %b.%d %y") %>
         <% elsif @climb.status == 'Sketchy' %>
           <div class="highlight-status orange">
             Climb is: <%= @climb.status %>
           </div>
-          as of <%= @climb.trip_reports.last.updated_at.strftime("%I:%M%P %A %b.%d %y") %>
+          as of <%= @climb.trip_reports.last.updated_at.strftime("%I:%M%P %a %b.%d %y") %>
         <% elsif @climb.status == 'Status Unknown' %>
           <div class="highlight-status gray">
             Climb is: <%= @climb.status %>
           </div>
-          as of <%= @climb.trip_reports.last.updated_at.strftime("%I:%M%P %A %b.%d %y") %>
+          as of <%= @climb.trip_reports.last.updated_at.strftime("%I:%M%P %a %b.%d %y") %>
         <% end %>
       <% end %>
     </div>
@@ -37,13 +37,17 @@
       <div>
         <p><strong>Description:</strong></p>
       </div>
-      <div><%= link_to favorite_text, favorite_path(climb: @climb), id:'favorite-link', style:"font-size: 16px; text-decoration:none", method: :patch, remote: true %>
+      <div id="climb_desc"><%= link_to favorite_text, favorite_path(climb: @climb), id:'favorite-link', style:"font-size: 16px; text-decoration:none; color: black", method: :patch, remote: true %>
       </div>
     </div>
-    <li><%= @climb.description %></li>
+    <li>
+      <%= @climb.description %>
+      <%= link_to edit_climb_path(@climb), style:"color:black" do %>
+        <i class="fas fa-edit"></i>
+      <% end %>
+    </li>
   </div>
 </div>
-
 
 <% @climb.trip_reports.each do |report| %>
   <ul class="card-TR">

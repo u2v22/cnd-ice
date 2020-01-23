@@ -1,18 +1,19 @@
-<h2 class="text-center mt-2">My Favorites</h2>
-
-<div class="card-climb">
-  <ul class="card-TR">
-    <% @favorites.each do |favorite| %>
-    <li>
-      <h4>
-        <%= link_to favorite.climb.name, climb_path(favorite.climb) %>:
-        <%= favorite.climb.status %>.
-        <% if favorite.climb.trip_reports.exists? %>
-          Last trip report from:
-          <%= favorite.climb.trip_reports.last.date.strftime("%a %b %d, %y") %>
-        <% end %>
-      </h4>
-    </li>
-    <% end %>
-  </ul>
+<div class="container-mobile">
+  <h2 class="text-center mt-2">My Favorites</h2>
+  <div class="card-climb">
+    <ul class="card-TR">
+      <% @favorites.each do |favorite| %>
+      <li>
+        <h5>
+          <%= link_to favorite.climb.name, climb_path(favorite.climb) %>:
+          <%= favorite.climb.status %>.
+          <% if favorite.climb.trip_reports.exists? %>
+            Last trip report from:
+            <%= favorite.climb.trip_reports.last.date.strftime("%a %b %d, %y") %>
+          <% end %>
+        </h5>
+      </li>
+      <% end %>
+    </ul>
+  </div>
 </div>

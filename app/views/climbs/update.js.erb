@@ -1,0 +1,16 @@
+function refreshForm(innerHTML) {
+  const updateForm = document.getElementById('climb_desc');
+  updateForm.innerHTML = innerHTML;
+}
+
+function updateClimb(reviewHTML) {
+  const climbs = document.getElementById('climb_desc');
+  climbs.innerHTML = reviewHTML;
+}
+
+<% if @climb.errors.any? %>
+  refreshForm('<%= j render "climbs/update", climb: @climb %>');
+<% else %>
+  updateClimb('<%= j render "climbs/show", review: @review %>');
+  refreshForm('<%= j render "climbs/update", climb: @climb %>');
+<% end %>
