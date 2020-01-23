@@ -27,6 +27,10 @@
   -webkit-box-orient: vertical;
 }
 
+.card-TR li > h5 {
+  margin: 0;
+}
+
 .card-TR-header {
   display: flex;
   justify-content: space-between;

@@ -6,7 +6,7 @@ class TripReport < ApplicationRecord
   STATUS = ['IN', 'not IN', 'Sketchy', 'Status Unknown']
 
   validates :date, :status, presence: true
-  validates :content, length: { minimum: 50, maximum: 1000 }
+  validates :content, length: { minimum: 100 }
 
   validate :date_cannot_be_in_the_past
 
