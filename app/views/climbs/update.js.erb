@@ -3,7 +3,7 @@ console.log('goodbye from ajax');
 // Replace the text.
 newDesc = "<%= @climb.description %>";
 document.getElementById('climb-desc').innerHTML = newDesc;
-console.log(newDesc);
 
 // Hide the form.
-document.getElementById('form-edit-climb').classList.add('d-none');
+del = document.getElementById('form-edit-climb');
+del.removeChild(del.firstChild);
