@@ -7,4 +7,6 @@ form.innerHTML = '<%= j render "climbs/edit" %>';
 // Replace the text.
 newDesc = "<%= @climb.description %>";
 document.getElementById('climb-desc').innerHTML = newDesc;
-console.log(newDesc);
+
+buttonEdit = document.getElementById('btn-edit');
+buttonEdit.classList.add('d-none');

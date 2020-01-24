@@ -41,6 +41,8 @@
       </div>
     </div>
     <li>
+      <div id="form-edit-climb">
+      </div>
       <div id="climb-desc">
         <%= @climb.description %>
       </div>
@@ -48,16 +50,14 @@
 
 
 
-      <%= link_to edit_climb_path(@climb), style:"color:black", remote: true do %>
+      <%= link_to edit_climb_path(@climb), id:"btn-edit", style:"color:black", remote: true do %>
         <i class="fas fa-edit"></i>
       <% end %>
 
 
 
 
-      <div id="form-edit-climb">
 
-      </div>
     </li>
   </div>
 </div>
