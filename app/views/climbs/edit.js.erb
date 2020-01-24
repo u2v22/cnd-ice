@@ -1,0 +1,11 @@
+console.log('hello from ajax')
+
+// Render the form in the view.
+form = document.getElementById('form-edit-climb');
+form.innerHTML = '<%= j render "climbs/edit" %>';
+
+// Replace the text.
+document.getElementById('climb-desc').innerHTML = "";
+
+buttonEdit = document.getElementById('btn-edit');
+buttonEdit.classList.add('d-none');

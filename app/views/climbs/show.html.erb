@@ -37,14 +37,27 @@
       <div>
         <p><strong>Description:</strong></p>
       </div>
-      <div id="climb_desc"><%= link_to favorite_text, favorite_path(climb: @climb), id:'favorite-link', style:"font-size: 16px; text-decoration:none; color: black", method: :patch, remote: true %>
+      <div><%= link_to favorite_text, favorite_path(climb: @climb), id:'favorite-link', style:"font-size: 16px; text-decoration:none; color: black", method: :patch, remote: true %>
       </div>
     </div>
     <li>
-      <%= @climb.description %>
-      <%= link_to edit_climb_path(@climb), style:"color:black" do %>
+      <div id="form-edit-climb">
+      </div>
+      <div id="climb-desc">
+        <%= @climb.description %>
+      </div>
+
+
+
+
+      <%= link_to edit_climb_path(@climb), id:"btn-edit", style:"color:black", remote: true do %>
         <i class="fas fa-edit"></i>
       <% end %>
+
+
+
+
+
     </li>
   </div>
 </div>
