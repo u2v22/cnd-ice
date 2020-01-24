@@ -29,7 +29,7 @@ class ClimbsController < ApplicationController
     Climb.find(params[:id]).update(description: @climb.description, updated_at: @climb.updated_at)
     if @climb.update(climb_params)
       respond_to do |format|
-       format.html { redirect_to climb_path(@climb) }
+       format.html { redirect_to edit_climb_path(@climb) }
        format.js { }
      end
     else

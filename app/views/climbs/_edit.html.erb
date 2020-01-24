@@ -1,5 +1,5 @@
-<div class="container mt-1">
-  <%= simple_form_for(@climb) do |f| %>
+<div> <!--class="d-none"-->
+  <%= simple_form_for(@climb, remote: true) do |f| %>
     <%= f.input :description, :input_html => {:rows => 10}  %>
     <%= f.input :updated_at, as: :hidden, default: Date.today %>
     <%= f.submit "Update climb description", data: { confirm: "Are you sure?" }, class:"btn btn-dark w-100" %>

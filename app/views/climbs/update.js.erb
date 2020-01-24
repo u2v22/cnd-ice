@@ -1,16 +1,9 @@
-function refreshForm(innerHTML) {
-  const updateForm = document.getElementById('climb_desc');
-  updateForm.innerHTML = innerHTML;
-}
+console.log('goodbye from ajax');
 
-function updateClimb(reviewHTML) {
-  const climbs = document.getElementById('climb_desc');
-  climbs.innerHTML = reviewHTML;
-}
+// Replace the text.
+newDesc = "<%= @climb.description %>";
+document.getElementById('climb-desc').innerHTML = newDesc;
+console.log(newDesc);
 
-<% if @climb.errors.any? %>
-  refreshForm('<%= j render "climbs/update", climb: @climb %>');
-<% else %>
-  updateClimb('<%= j render "climbs/show", review: @review %>');
-  refreshForm('<%= j render "climbs/update", climb: @climb %>');
-<% end %>
+// Hide the form.
+document.getElementById('form-edit-climb').hide();
