@@ -1,0 +1,63 @@
+variable,name,approach,grade,latitude,longitude,region,avi,status
+wings_and_stage,The Wings and the Stage,II,WI3-4,52.311,-117.31476,jasper,blue,Status Unknown
+whiteman,Whiteman Falls,IV,WI6,51.036,-115.087,kananaskis,tbd,IN
+weatheringheights,Weathering Heights,III,WI4,51.25056,-115.19583,northghost,green,not IN
+wad_valley,WAD Valley Climbs,tbd,"M6 to M8, WI 4-6+",52.82932,-117.70494,jasper,tbd,Status Unknown
+urs,The Urs Hole,tbd,WI3-5,51.22651,-115.56155,banff,black,Status Unknown
+two_low_4_0,2 Low 4 Zero,III,WI3,50.89,-115.136,kananaskis,tbd,Sketchy
+tangle,Tangle Falls,I,WI3,52.29095,-117.31665,jasper,green,IN
+takkakaw,Takkakaw Falls,V,WI4,51.42,-116.44556,yoho,black,Status Unknown
+sunwapta,Sunwapta Falls,II,WI4,52.33072,-117.30858,jasper,green,Status Unknown
+sunshine,Sunshine,II,WI3,51.27036,-115.17874,southghost,green,Status Unknown
+snowline,Snowline,III,WI4,50.89,-115.136,kananaskis,tbd,IN
+sinatra,Sinatra Falls,III,WI3,51.036,-115.087,kananaskis,tbd,Status Unknown
+sea_of_vap,Sea of Vapours,V,WI6-7,51.15826,-115.50003,banff,black,Status Unknown
+rogansgully,Rogans Gully,III,WI3,51.2278,-115.5625,banff,blue,IN
+rainbowserpent,Rainbow Serpent,III,WI6,51.2872,-115.214,southghost,green,Sketchy
+r_experts_choice,Experts Choice Right,III,WI6,49.06333,-113.92694,waterton,tbd,Status Unknown
+quick_dirty,Quick and Dirty,II,WI3,49.06796,-113.94093,waterton,tbd,IN
+professorfalls,Professor Falls,III,WI4,51.16334,-115.49194,banff,black,Status Unknown
+polar_circus,Polar Circus,V,WI5,52.14361,-117.04472,banff,black,IN
+pilier_poutins,Le Pilier de Putins,II,WI6,49.06796,-113.94093,waterton,tbd,Status Unknown
+panther,Panther Falls,I,WI4,52.182,-117.057,banff,green,not IN
+nemesis,Nemesis,V,WI5+/6,51.16987,-116.0533,kootenay,black,not IN
+murchison,Murchison Falls,III,WI4+,51.93333,-116.675,banff,blue,IN
+moonlight,Moonlight,III,WI4,50.89,-115.136,kananaskis,tbd,Sketchy
+mixmaster,Mixed Master,IV,WI4+ M4-5,52.16045,-117.02293,banff,green,IN
+meltout,Meltout,III,WI3,52.29095,-117.31665,jasper,green,Status Unknown
+maligne,Maligne Canyon Ice Climbs,I,WI3-4,52.91894,-118.00793,jasper,green,Status Unknown
+malignantmushroom,Malignant Mushroom,II,WI5,51.27036,-115.17874,northghost,green,Sketchy
+m_experts_choice,Experts Choice Middle,III,WI6,49.06333,-113.92694,waterton,tbd,Status Unknown
+louisefalls,Louise Falls,III,WI4,51.4,-116.2223,banff,green,Status Unknown
+l_experts_choice,Experts Choice Left,II,WI3,49.06333,-113.92694,waterton,tbd,Status Unknown
+kiddfalls,Kidd Falls,IV,WI4,50.8944,-115.1875,kananaskis,black,not IN
+kerkeslin,Kerkeslin Falls,II,WI3,52.61764,-117.81464,jasper,blue,Status Unknown
+haffner,Haffner Creek,III,WI4-5,51.178,-116.108,banff,green,IN
+guiness_stout,Guinness Stout,III,WI4+,51.37982,-116.48598,yoho,black,Sketchy
+guiness_gully,Guinness Gully,II,WI4,51.37472,-116.50361,yoho,black,IN
+grottofalls,Grotto Falls,II,WI3-4 M6+,51.0833,-115.2667,kananaskis,green,IN
+french_kiss,French Kiss,II,WI3,49.06782,-113.94114,waterton,tbd,Sketchy
+fangandfist,Fang and Fist,V,WI5,51.2,-115.17,northghost,tbd,Status Unknown
+edge_of_the_world,Edge of the World,tbd,WI4,52.80556,-118.07917,jasper,green,not IN
+eagle,Eagle,III,WI5,51.32528,-115.22111,northghost,tbd,Status Unknown
+chantilly,Chantilly,II,WI3,50.86262,-115.09673,kananaskis,tbd,Status Unknown
+cascadefalls,Cascade Falls,III,WI3,51.2278,-115.5625,banff,black,Status Unknown
+carlsberg,Carlsberg Column,III,WI5,51.37472,-116.50361,yoho,black,Status Unknown
+bridge_too_far,A Bridge Too Far,IV,WI4+,50.8944,-115.1875,kananaskis,tbd,Status Unknown
+bow,Bow Falls,III,WI4,51.65694,-116.51389,banff,blue,Sketchy
+bourgeauright,Bourgeau Right,IV,WI4-R,51.132,-115.775,banff,black,Status Unknown
+beowulf,Beowulf,III,WI4,51.32583,-115.24139,northghost,blue,Status Unknown
+bearspirit,Bear Spirit,II,WI3-5,51.171216,-115.660737,banff,green,Status Unknown
+balfour,Balfour Wall,II,WI3-4,51.92039,-116.68752,banff,green,IN
+aquarius,Aquarius,III,WI4,51.28722,-115.21417,southghost,green,IN
+anorexia,Anorexia Nervosa,III,WI4-R,51.25056,-115.19583,banff,black,Status Unknown
+amadeus,Amadeus,III,WI4 M5,51.01548,-115.05589,kananaskis,tbd,Sketchy
+shades,Shades of Beauty,III,WI4,52.30907,-117.259168,banff,blue,IN
+rick_black,Rick Black Memorial,III,WI5,52.31582,-117.30171,banff,blue,Sketchy
+breast,Nothing but the Breast,II,WI4,52.14568,-116.471866,dth,black,IN
+joker,The Joker,III,WI3,51.25415,-115.164842,southghost,tbd,Sketchy
+sorceror,The Sorcerer,IV,WI5,51.34391,-115.215,northghost,black,IN
+bougeau_lhs,Bourgeau LHS,IV,WI5,51.132,-115.775,banff,black,IN
+vr,Virtual Reality,III,WI6,51.93333,-116.675,banff,black,IN
+chalice_blade,The Chalice and the Blade,IV,WI5,50.75176,-115.28237,kananaskis,black,IN
+,Lone Ranger,IV,WI3+,50.75176,-115.28237,kananaskis,black,IN
