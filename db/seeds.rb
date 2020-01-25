@@ -2,9 +2,10 @@ require 'csv'
 require 'date'
 # This file should contain all the record creation needed to seed the database with its default values.
 # Region options: "north-rockies", "cariboos", "north-columbia", "south-columbia", "kootenay-boundary", "purcells", "lizard-range", "south-rockies", "kananaskis", "little-yoho", "jasper"? , "banff"?
-filepath_users = '/Users/veronica/code/u2v22/cnd-ice/db/seed_users.csv'
-filepath_climbs = '/Users/veronica/code/u2v22/cnd-ice/db/seed_climbs.csv'
-filepath_trs = '/Users/veronica/code/u2v22/cnd-ice/db/seed_trs.csv'
+
+filepath_users = Rails.root.join("db/seed_users.csv")
+filepath_climbs = Rails.root.join("db/seed_climbs.csv")
+filepath_trs = Rails.root.join("db/seed_trs.csv")
 
 northghost = "North Ghost"
 southghost = "South Ghost"
