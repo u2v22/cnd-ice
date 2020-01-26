@@ -4,6 +4,16 @@ class ClimbsController < ApplicationController
   before_action :set_paper_trail_whodunnit
 
   def index
+    sql_query = " \
+        climb.name @@ :query \
+        OR climb.trip_report.content @@ :query \
+        OR climb.description @@ :query \ "
+    if params[:query].present?
+      @climbs = Climb.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @climbs = Climb.all
+    end
+
     if params[:status] && params[:grade]
       @climbs = Climb.where(status: params[:status]).where('grade ILIKE ANY ( array[?] )', params[:grade])
     elsif params[:status]

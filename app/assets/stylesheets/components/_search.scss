@@ -1,0 +1,31 @@
+.search-wrapper {
+  display: flex;
+  position:absolute;
+  top: 28px;
+  padding: 4px;
+  opacity: 0.6;
+  width: 100vw;
+}
+
+.search {
+  border-radius: 50px;
+  background-color: white ;
+  color: #333333;
+  font-size: 16px;
+}
+
+.bar {
+  flex-grow:1;
+  margin-right: 8px;
+}
+
+.filter {
+  margin-left: 8px;
+}
+
+@media (max-width: 576px){
+  .search-mobile {
+      top: 32px;
+      font-size: 16px;
+  }
+}
