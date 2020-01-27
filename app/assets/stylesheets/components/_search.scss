@@ -29,6 +29,14 @@
   }
   .search {
   border-radius: 8px;
+  padding: 0 4px;
+  }
+  .form-control[type=text] {
+    height: 28px;
+  }
+  .form-control > .btn[type=submit] {
+    height: 28px;
+    padding: none;
   }
 }
 
