@@ -5,13 +5,12 @@ class ClimbsController < ApplicationController
 
   def index
     if params[:query].present?
-    sql_query = " \
-        climb.name @@ :query \
-        OR climb.trip_report.content @@ :query \
-        OR climb.description @@ :query"
-      #@climbs = Climb.where(sql_query, query: "%#{params[:query]}%")
-      @climbs = Climb.joins(:trip_report).where(sql_query, query: "%#{params[:query]}%")
-
+      sql_query = "climbs.name @@ :query"
+        # OR climb.description @@ :query
+        # OR climb.trip_report.content @@ :query \
+      # @climbs = Climb.where(sql_query, query: "%#{params[:query]}%")
+      @climbs = Climb.where("climbs.name @@ ?", "%#{params[:query]}%")
+      # raise
     else
       @climbs = Climb.all
     end
