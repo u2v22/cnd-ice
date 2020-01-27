@@ -4,7 +4,9 @@ class ClimbsController < ApplicationController
   before_action :set_paper_trail_whodunnit
 
   def index
-    if params[:status] && params[:grade]
+    if params[:query].present?
+      @climbs = Climb.where("name @@ ?", "%#{params[:query]}%")
+    elsif params[:status] && params[:grade]
       @climbs = Climb.where(status: params[:status]).where('grade ILIKE ANY ( array[?] )', params[:grade])
     elsif params[:status]
       @climbs = Climb.where(status: params[:status])
@@ -13,6 +15,11 @@ class ClimbsController < ApplicationController
     else
       @climbs = Climb.where.not(latitude: nil, longitude: nil)
     end
+
+    if @climbs.nil?
+      @climbs = Climb.where.not(latitude: nil, longitude: nil)
+    end
+
     @markers = @climbs.map do |climb|
       {
         lat: climb.latitude,
