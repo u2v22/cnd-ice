@@ -19,10 +19,10 @@ yoho = "Yoho"
 dth = "David Thompson Hwy"
 
 # avi terrains
-green = "Simple"
-blue = "Challenging"
-black = "Complex"
-tbd = "TBD"
+green = "ATES-1"
+blue = "ATES-2"
+black = "ATES-3"
+tbd = "Unknown"
 
 puts 'Destroying previous favorites...'
 Favorite.destroy_all
@@ -55,7 +55,7 @@ puts "...#{Climb.all.count} climbs were created!"
 puts 'Generating new trip reports...'
 CSV.foreach(filepath_trs, csv_options) do |row|
   puts "user: #{row[0]}, date:#{row[1]} climb: #{row[2]}, status: #{row[3]}, content: #{row[4]}"
-  TripReport.create!(user: User.find(row[0]), date: Date.parse(row[1]), climb: Climb.find_by(name: row[3]), status: row[4], content: row[5])
+  TripReport.create!(user: User.find(row[0]), date: Date.parse(row[1]), climb: Climb.find_by(name: row[3]), status: row[4], content: row[5], photo: row[6])
 end
 
 puts "...#{TripReport.all.count} trip reports were created!"
