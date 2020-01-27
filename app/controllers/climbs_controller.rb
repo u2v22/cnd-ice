@@ -4,12 +4,14 @@ class ClimbsController < ApplicationController
   before_action :set_paper_trail_whodunnit
 
   def index
+    if params[:query].present?
     sql_query = " \
         climb.name @@ :query \
         OR climb.trip_report.content @@ :query \
-        OR climb.description @@ :query \ "
-    if params[:query].present?
-      @climbs = Climb.where(sql_query, query: "%#{params[:query]}%")
+        OR climb.description @@ :query"
+      #@climbs = Climb.where(sql_query, query: "%#{params[:query]}%")
+      @climbs = Climb.joins(:trip_report).where(sql_query, query: "%#{params[:query]}%")
+
     else
       @climbs = Climb.all
     end
