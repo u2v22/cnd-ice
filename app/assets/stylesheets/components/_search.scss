@@ -1,4 +1,4 @@
-.search-wrapper {
+.search-wrapper-mobile {
   display: flex;
   position:absolute;
   top: 28px;
@@ -23,9 +23,23 @@
   margin-left: 8px;
 }
 
-@media (max-width: 576px){
-  .search-mobile {
-      top: 32px;
-      font-size: 16px;
+@media (min-width: 576px){
+  .search-wrapper-mobile {
+    display: none;
+  }
+  .search {
+  border-radius: 8px;
+  }
+}
+
+.search-wrapper-desktop {
+  display: flex;
+  opacity: 0.4;
+  margin-left: 20px;
+}
+
+@media (max-width: 576px) {
+  .search-wrapper-desktop {
+    display: none;
   }
 }

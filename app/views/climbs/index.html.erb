@@ -4,7 +4,7 @@
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
 ></div>
 
-<div class="search-wrapper">
+<div class="search-wrapper-mobile">
   <div class="bar">
     <%= form_tag root_path, method: :get do %>
       <%= text_field_tag :query,

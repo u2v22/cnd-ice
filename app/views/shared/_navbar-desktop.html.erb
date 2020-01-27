@@ -1,7 +1,24 @@
 <div class="container-navbar-desktop">
-  <div class="navbar-logo">
-    <%= link_to "CND-ROCKIES-ICE-CONDITIONS", root_path%>
+  <div class="d-flex align-items-center">
+    <div class="navbar-logo">
+      <%= link_to "CND-ROCKIES-ICE-CONDITIONS", root_path%>
+    </div>
+    <div class="search-wrapper-desktop">
+      <div class="bar">
+      <%= form_tag root_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control bar search",
+          placeholder: "Search for a climb" %>
+      </div>
+      <%= button_tag type: "submit", class: "btn search" do %>
+      <i class="fas fa-search"></i>
+      <% end %>
+      <% end %>
+    </div>
   </div>
+
+
   <div class=navbar-links>
       <ul>
         <li><%= link_to "Trip Reports", trip_reports_path %></li>
