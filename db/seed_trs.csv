@@ -1,43 +1,43 @@
-user,date,climb,climb,status,content
-1,November 11 2019,polar_circus,Polar Circus,IN,Has the radest day climbing Polar Circus. The climb was super fat. Weather was great and avi was low-low-low. Looked like there was some snow accumulation so I definitely wouldn't recommend climbing this if avi conditions worsen.
-2,November 30 2019,panther,Panther Falls,not IN,Walked down to the falls. The approach was snowy but there was a bootpack. There was a bit of freezing but there was still tons of water gushing through. There is a fair amount of spray ice on the climbs behind panther.
-3,December 15 2019,nemesis,Nemesis,not IN,Looks like it was in at one point but then it got some sun. The falls are rather 'snicey. Here is a picture from far away along the approach. 
-2,January 12 2020,murchison,Murchison Falls,IN,Had a great day climbing. The ice was solid. Even the last pitch was fairly dry. Approach was well travelled.
-1,December 8 2019,moonlight,Moonlight,Sketchy,Climbed this yesterday. It was a little too wet for my liking. We climbed the first and second pitches but the bailed. 
-1,November 29 2019,mixmaster,Mixed Master,IN,Surprisingly quite fat ice. The ice pitches could take 16cm screws. Cracks were dry so had no problems placing pro. 10/10 would recommend doing.
-2,December 31 2019,two_low_4_0,2 Low 4 Zero,Sketchy,The first pitch was really stetchy. Almost didn't climb it but then remembered it got bolted. Beyond the first pitch the climb got better. Nice and dry with good ice.
-3,January 11 2020,tangle,Tangle Falls,IN,The other climb we were planning on doing didn't quite work out so we stopped by at Tangle on our way home. Got a few good quick laps. Wasn't busy at all.
-3,December 11 2019,haffner,Haffner Creek,IN,Left side climb wasn't too wet. Right side is super hooked out. The climbs further out to the right are just barely touching down. They are also hooked out to start. Lots of snow near the anchors.
-1,January 2 2020,guiness_stout,Guinness Stout,Sketchy,Stout wasn't as fat as we had hoped. The centerline seemed hollow and delaminating. The sides were more stable and felt well connected to the rock.
-2,January 6 2020,guiness_gully,Guinness Gully,IN,As usual the first pitch is a bit skinny but it goes. Second pitch was solid and almost hero ice. The last pitch was more brittle but had enough hooks to easily climb.
-2,January 20 2020,grottofalls,Grotto Falls,IN,A bit sun affected near the top but the base of both his and hers are in good condition. The pillar on his is well formed.
-3,November 20 2019,whiteman,Whiteman Falls,IN,Weird coincidence that 4 parties of 2 all showed up for this one on the same day. The last two parties turned back rather quickly. Climb was a bit hollow in some sections on the left hand side. Overall it was very wet. 
-1,December 5 2019,weatheringheights,Weathering Heights,not IN,Ended up going to north ghost after realizing that this climb wasn't in. Good think we left super early so we still managed to get to Beowulf and be the first people there.
-2,December 23 2019,wad_valley,WAD Valley Climbs,Status Unknown,Started hiking in but the snow was way too deep. We went through some waist high post-holing before deciding to turn around.
-3,January 22 2020,urs,The Urs Hole,Status Unknown,We were going to do this climb but got scooped. Looked good from far away but who knows what condition it's actually in.
+user,date,climb,climb,status,content,photo
+1,November 11 2019,polar_circus,Polar Circus,IN,Has the radest day climbing Polar Circus. The climb was super fat. Weather was great and avi was low-low-low. Looked like there was some snow accumulation so I definitely wouldn't recommend climbing this if avi conditions worsen.,
+2,November 30 2019,panther,Panther Falls,not IN,Walked down to the falls. The approach was snowy but there was a bootpack. There was a bit of freezing but there was still tons of water gushing through. There is a fair amount of spray ice on the climbs behind panther.,
+3,December 15 2019,nemesis,Nemesis,not IN,Looks like it was in at one point but then it got some sun. The falls are rather 'snicey. Here is a picture from far away along the approach. ,
+2,January 12 2020,murchison,Murchison Falls,IN,Had a great day climbing. The ice was solid. Even the last pitch was fairly dry. Approach was well travelled.,
+1,December 8 2019,moonlight,Moonlight,Sketchy,Climbed this yesterday. It was a little too wet for my liking. We climbed the first and second pitches but the bailed. ,
+1,November 29 2019,mixmaster,Mixed Master,IN,Surprisingly quite fat ice. The ice pitches could take 16cm screws. Cracks were dry so had no problems placing pro. 10/10 would recommend doing.,
+2,December 31 2019,two_low_4_0,2 Low 4 Zero,Sketchy,The first pitch was really stetchy. Almost didn't climb it but then remembered it got bolted. Beyond the first pitch the climb got better. Nice and dry with good ice.,
+3,January 11 2020,tangle,Tangle Falls,IN,The other climb we were planning on doing didn't quite work out so we stopped by at Tangle on our way home. Got a few good quick laps. Wasn't busy at all.,
+3,December 11 2019,haffner,Haffner Creek,IN,Left side climb wasn't too wet. Right side is super hooked out. The climbs further out to the right are just barely touching down. They are also hooked out to start. Lots of snow near the anchors.,
+1,January 2 2020,guiness_stout,Guinness Stout,Sketchy,Stout wasn't as fat as we had hoped. The centerline seemed hollow and delaminating. The sides were more stable and felt well connected to the rock.,
+2,January 6 2020,guiness_gully,Guinness Gully,IN,As usual the first pitch is a bit skinny but it goes. Second pitch was solid and almost hero ice. The last pitch was more brittle but had enough hooks to easily climb.,
+2,January 20 2020,grottofalls,Grotto Falls,IN,A bit sun affected near the top but the base of both his and hers are in good condition. The pillar on his is well formed.,
+3,November 20 2019,whiteman,Whiteman Falls,IN,Weird coincidence that 4 parties of 2 all showed up for this one on the same day. The last two parties turned back rather quickly. Climb was a bit hollow in some sections on the left hand side. Overall it was very wet. ,
+1,December 5 2019,weatheringheights,Weathering Heights,not IN,Ended up going to north ghost after realizing that this climb wasn't in. Good think we left super early so we still managed to get to Beowulf and be the first people there.,
+2,December 23 2019,wad_valley,WAD Valley Climbs,Status Unknown,Started hiking in but the snow was way too deep. We went through some waist high post-holing before deciding to turn around.,
+3,January 22 2020,urs,The Urs Hole,Status Unknown,We were going to do this climb but got scooped. Looked good from far away but who knows what condition it's actually in.,
 4,November 19 2019,lone_ranger,Lone Ranger,IN,"Just in case you thought Rangers Creek didn't get enough traffic here's a recent pic with all climbs looking FAT.
 
-Climbed lone ranger yesterday, solid second crux pitch with some great early season ice formations."
-4,November 9 2019,chalice_blade,The Chalice and the Blade,IN,"Lead chalice and the blade today with unbelievable stoke!!! First 5 lead and I felt super confident on it, can't wait to get on more!!"
+Climbed lone ranger yesterday, solid second crux pitch with some great early season ice formations.",image/upload/v1579926526/wewp9rwoycnt8lnikxgs.jpg
+4,November 9 2019,chalice_blade,The Chalice and the Blade,IN,"Lead chalice and the blade today with unbelievable stoke!!! First 5 lead and I felt super confident on it, can't wait to get on more!!",
 4,November 15 2019,virtual_reality,Virtual Reality,IN,"Lead virtual reality with an unbelievable amount of stoke today!!
 
 Enough stoke for this whole group!!!
 
-1st WI6 baby!!! Yeah!!!!"
+1st WI6 baby!!! Yeah!!!!",
 4,October 26 2019,murchison,Murchison Falls,IN,"Climbed most of Murchison Falls today with Travis TenHove.
 
 On the last 30M we had a large pillar come down very close to us and we went running with our tails between our legs.
 
 Also a shot of the our neighbor pulling a solid line on virtual reality (I think Cory or Ryan?)
 
-Be safe out there!"
-4,December 29 2019,bourgeau_lhs,Bourgeau LHS,IN,"Climbed Bourgeau left today in really good condition, fat blue ice.
+Be safe out there!",image/upload/v1579927549/razlees4d7aezt0bm57h.jpg
+4,December 29 2019,bourgeau_lhs,Bourgeau LHS,IN,"Climbed Bourgeau left today in really good condition, fat ATES-2 ice.
 
 Some deep wind drifts to avoid on the way up, but overall felt okay avi wise until the sun came out near us topping out.
 
 We scurried away quickly.
 
-Merrick Montemurro lead the crux pitch, was steeper than it looked; many kudos."
+Merrick Montemurro lead the crux pitch, was steeper than it looked; many kudos.",
 4,November 11 2019,rainbow_serpent,Rainbow Serpent,IN,"Ryan Keen and myself put our big boy pants on today and clobbered our way into the ghost and up RS in EXCELLENT conditions.
 
 Weather and ice conditions really went in our favor and south ghost access was super chill today. Another party made it in with a stock jeep wrangler and joined us for the day.
@@ -48,21 +48,21 @@ We didn't mind, was too busy being so euphoric on Ryan's first 6 lead with the f
 
 Technical climbing on the first pitch and sustained steepness on the second;definitely in 6 conditions right now.
 
-Also, two big fracture lines in FS right now. Didn't stop the French though!"
+Also, two big fracture lines in FS right now. Didn't stop the French though!",image/upload/v1579926470/qoz2cr0htwbtuylxtv6i.jpg
 4,December 21 2019,sorcerer,The Sorcerer,IN,"Nothing stopped Ryan Keen and myself from bagging The Sorcerer today including these roads and all the powder on the trail.
 
 Ghost is gnarly right now, kudos to Ryan for getting us in AND out.
 
-Beautiful day."
+Beautiful day.",image/upload/v1579926236/jwqigxfejvvpselgp8c5.jpg
 4,October 11 2019,joker,The Joker,Sketchy,"Climbed a very thin joker today with Brianne Arnold.
 
-Everything up there needs just a bit more time IMO.."
+Everything up there needs just a bit more time IMO..",
 4,December 29 2019,breast,Nothing but the Breast,IN,"Solid day out at Nothing but the Breast with Hayden Ewing.
 
-Conditions were really good, warm temps and nice ice."
+Conditions were really good, warm temps and nice ice.",
 4,November 2 2019,shades_of_beauty,Shades of Beauty,IN,"Beauty day out on SOB with Brenden Nielsen.
 
-Decent ice the entire way up."
-4,November 2 2019,rick_black,Rick Black Memorial,Sketchy,"Went and TR'ed Rick Blaks memorial route after. First pitch is definitely fat but the vein is incredibly thin.
+Decent ice the entire way up.",image/upload/v1579926609/jehqrwqrrup8aixq3deg.jpg
+4,November 2 2019,rick_ATES-3,Rick Black Memorial,Sketchy,"Went and TR'ed Rick Blaks memorial route after. First pitch is definitely fat but the vein is incredibly thin.
 
-Someone braver then us could lead it but nay not us!"
+Someone braver then us could lead it but nay not us!",https://res.cloudinary.com/u2v22/image/upload/v1579926575/ug2ow9puhxy4jpdebnhk.jpg
