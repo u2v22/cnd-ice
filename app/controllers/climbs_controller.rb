@@ -1,5 +1,5 @@
 class ClimbsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index]
   before_action :set_climb, only: [:show, :new, :edit, :update, :create]
   before_action :set_paper_trail_whodunnit
 
